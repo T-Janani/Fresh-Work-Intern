@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>search box</title>
+  <link rel="stylesheet" type="text/css" href="searchbar.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+  *{
+    margin: 0px auto;
+	padding: 20px;
+	font-family: sans-serif;
+   }
+   
+  body{
+  background-color: #2196F3;
+  color: white;
+  }
+  
+  .main{
+   position: center;
+   padding: 190px;
+   width: 400px;
+   left: 20%;
+   margin: 0 auto;
+  }  
+  
+  input{
+  border: 3px solid #ccc;
+  height:40px;
+  width: 300px;
+  border-radius: 50px;
+  padding: 10px;
+  }
+  </style>
+ </head>
+
+ <body>
+  <div class="main"  onclick="myFunction1()">
+  <p style="font-size:60px;">Movie<b>Wiki</b><br></p>
+  <form action="http://www.omdbapi.com/?apikey=445e7d67&">
+   <input type="text" id="myText" placeholder="Search.." name="t">
+   <div class="main"  onclick="myFunction2()">
+    <img src="http://img.omdbapi.com/?apikey=445e7d67&t.x.svg" alt="Alps" style="width:100%">
+   </div>
+   </form>
+  </div>
+  <script>
+   
+   function myFunction2() {
+   location.replace("http://www.omdbapi.com/?apikey=445e7d67&t.x")
+   }
+
+   function  myFunction1() {
+   var x = document.getElementById("myText").value;
+   }
+   
+   </script>
+ </body>
+</html>
